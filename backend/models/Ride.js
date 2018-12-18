@@ -1,11 +1,15 @@
 let mongoose = require('mongoose');
 
 let Address= require('./Address');
+let Passenger= require('./Passenger');
 
 let RideSchema= new mongoose.Schema({
-    destination:String,
+    
+    departure:String,
     date: String,
-    address: Address
+    passengers: [Passenger],
+    address: Address,
+    maxPassengers:String
 });
 mongoose.model('Ride',RideSchema);
 
