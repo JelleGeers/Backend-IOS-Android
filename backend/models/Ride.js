@@ -4,10 +4,15 @@ let Address= require('./Address');
 
 let RideSchema= new mongoose.Schema({
     destination:String,
-    date: Date,
+    date: String,
     address: Address
 });
 mongoose.model('Ride',RideSchema);
+
+
+
+
+
 /*
 Ride
 name
